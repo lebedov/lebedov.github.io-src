@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Web Site{% endblock %}
+
+{% set current_page = "index" %}
+
+{% block content %}
+    <h2>About Me</h2>
+
+    <div id="sidebar" class="left">
+      <img src="images/lev.png" width="200px" height="200px" align="left" class="photo" />
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <p>Welcome to my web site!</p>
+      
+      <p>I completed my Ph.D. in computational neuroscience at Columbia University's 
+      Department of Electrical Engineering under the supervision
+      of Professor <a href="http://www.ee.columbia.edu/~aurel/">Aurel A.
+          Lazar</a> in May 2016. 
+      Read more about my <a href="research.html">academic interests</a> and my latest 
+      <a href="publications.html">publications</a> on this site. Software projects
+      I have contributed to and/or are currently working on are 
+      available via <a href="projects.html">this page</a>
+      and the GitHub site of the <a href="http://bionet.github.io">Bionet Group</a>.</p>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

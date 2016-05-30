@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - Book Cover{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+    <h2>Book Cover</h2>
+
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 6" x 8"
+      <hr />
+        Completed: 2000
+      <hr />
+
+      <p>I designed this frontpiece on commission for a collection 
+      of short stories.</p>
+
+      <p>I sketched the design with an HB pencil and pounced the drawing
+      onto a clean piece of Bristol paper using tracing paper and a 5B
+      pencil. I inked the design using a Stanford Uniball Micro pen, scanned
+      it, and touched up the image using <a href="http://www.gimp.org">Gimp</a>.
+      </p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+        <img src="art/book-cover.jpg" height="690" width="425" class="aligncenter photo" alt="Psalms I" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

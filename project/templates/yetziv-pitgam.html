@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - Yetziv Pitgam{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+   <h2>Yetziv Pitgam <span class="hebrew">(&#1497;&#1510;&#1497;&#1489 &#1508;&#1514;&#1490;&#1501)</span></h2>
+
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 8" x 10"
+      <hr />
+        Completed: 1997
+      <hr />
+
+      <p>I wrote this manuscript with Pelikan 4001 black ink and an Osmiroid
+      calligraphy pen. I used Daler Rowney Series A and B gouache to color
+      the border design.</p>
+
+      <p>The manuscript text was taken from a Jewish liturgical poem that is
+      recited on the second day of Shavuot (Pentecost).</p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+        <img src="art/yetziv-pitgam.jpg" class="aligncenter photo" alt="Yetziv Pitgam" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

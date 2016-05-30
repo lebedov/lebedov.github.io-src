@@ -1,0 +1,20 @@
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function validate(theform){
+    if(theform.rmail.value.length < 7){
+        alert("You must enter a valid email address!");
+        return false;
+    }else if(theform.subject.value.length == 0){
+	alert("You must enter a subject!");
+    }else if(theform.seltext.value.length == 0){
+        alert("Sorry, but you have to write something!");
+        return false;
+    }else{
+        theform.submit();
+        return true;
+    }
+}
+
+/* ]]> */
+</script>

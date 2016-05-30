@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - Dror Yikra{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+    <h2>Dror Yikra <span class="hebrew">(&#1491;&#1512;&#1493&#1512; &#1497;&#1511;&#1512;&#1488)</span></h2>
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 8" x 10"
+      <hr />
+        Completed: 1996
+      <hr />
+
+      <p>This manuscript was written using Pelikan 4001 black ink and an
+        Osmiroid calligraphy pen. I used water soluble Zebra MilliPens to draw
+        the designs. Although not readily apparent, the dark brown regions on
+        the manuscript are gold ink.</p>
+
+      <p>The manuscript text was taken from a Jewish liturgical poem recited on
+        the Sabbath. The poem was authored by the 10th Century Hebrew grammarian
+        Dunash ibn Labrat.</p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+      <img src="art/dror-yikra.jpg" class="aligncenter photo" alt="Dror Yikra" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - Old Man{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+    <h2>Old Man</h2>
+
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 4" x 8"
+      <hr />
+        Completed: 1999
+      <hr />
+
+      <p>
+      I drew this composition in pen and color pencil; the decorations on
+      the figure's robe were colored with gold ink.
+      </p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+        <img src="art/old-man.jpg" height="672" width="350" class="aligncenter photo" alt="Old Man" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - New Year Greeting I{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+    <h2>New Year Greeting I</h2>
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 8" x 10"
+      <hr />
+        Completed: 2000
+      <hr />
+
+      <p>I drew this rather large card with the intent to create a
+      reasonably detailed scanned image to duplicate and send to several
+      friends.  I outlined the letters in pencil and inked them in blue and
+      black ink with a dip pen.  The Hebrew words translate to "May you be
+      inscribed for a good year."</p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+      <img src="art/new-year-1.jpg" width="400" height="500" class="aligncenter photo" alt="New Year Greeting I" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

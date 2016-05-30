@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - Man in a Green Hat{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+    <h2>Man in a Green Hat</h2>
+
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 8" x 11"
+      <hr />
+        Completed: 1998
+      <hr />
+
+      <p>I drew this composition on cardboard with Caran D'Ache NeoColor II
+      water-soluble pastels.</p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+        <img src="art/green-hat-man.jpg" height="378" width="300" class="aligncenter photo" alt="Man in a Green Hat" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Lev Givon{% endblock %}
+
+{% set current_page = "contact" %}
+
+{% block content %}
+    <h2>Contact Me</h2>
+
+    <div id="sidebar" class="left">
+      <img src="images/lev.png" width="200px" height="200px" align="left" class="photo" />
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div id="contact" align="left">
+        <p>You can contact me directly by <a
+            href="mailto:%6C%65%76%40%63%6F%6C%75%6D%62%69%61%2E%65%64%75">email</a>,
+          <a href="https://www.linkedin.com/in/lebedov">LinkedIn</a>, or by using the following form. 
+           If you have questions or bug reports regarding <a href="projects.html">my research/development projects</a>, 
+           feel free to submit them through GitHub's issue trackers.</p>
+
+        <form action="http://www.columbia.edu/cgi-bin/generic-inbox.pl" method="post">
+          <input type="hidden" name="rmailreq" value="true" />
+          <input type="hidden" name="mail_dest" value="lev@columbia.edu" />
+          <input type="hidden" name="ack_link" value="http://lebedov.github.io/received.html" />
+          <label>Email Address</label><br/>
+          <div class="field"><input type="text" name="rmail" /></div>
+          <div class="clear" style="padding-bottom:5px"></div>
+          <label>Subject</label><br/>
+          <div class="field"><input type="text" name="subject" /></div>
+          <div class="clear" style="padding-bottom:5px"></div>
+          <label>Message</label><br/>
+          <div class="field2"><textarea name="message"></textarea></div>
+          <div class="clear" style="padding-bottom:5px"></div>
+          <div class="button"><input class="button" type="submit" value="Submit" onclick="validate(this.form)" /></div>
+          <div class="button"><input class="button" type="reset" value="Erase" /></div>
+        </form>
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}

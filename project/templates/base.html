@@ -1,0 +1,96 @@
+{% set current_page = current_page | default("index") -%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Lev Givon" />
+    <meta name="keywords" content="Lev Givon" />
+    <meta name="author" content="Lev Givon" />
+    <link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Droid+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" media="all" href="css/inland.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript" src="js/nhpup_1.1.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+    {% if current_page == "contact" %}{% include "base_contact_js.html" %}{% endif %}
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+  <div id="toplinks">
+    <ul class="toplinks_links">
+      <!-- <li><a href="http://www.ee.columbia.edu"
+          onmouseover="nhpup.popup('Dept. of Electrical Engineering, Columbia University');">
+          <img src="images/seas-crown-small.png" alt="Columbia EE Department"/></a></li> -->
+      <li><a href="https://www.researchgate.net/profile/Lev_Givon"
+          onmouseover="nhpup.popup('Lev\'s ResearchGate Profile');">
+          <img src="images/rg-small.png" alt="Lev's ResearchGate Profile"/></a></li>
+      <li><a href="https://github.com/lebedov"
+          onmouseover="nhpup.popup('Lev\'s GitHub Page');">
+          <img src="images/github-small.png" alt="Lev's GitHub Page"/></a></li>
+      <li><a href="https://www.linkedin.com/in/lebedov"
+          onmouseover="nhpup.popup('Lev\'s LinkedIn Page');">
+          <img src="images/linkedin-small.png" alt="Lev's LinkedIn Page"/></a></li>
+    </ul>
+  </div>
+  
+  <div id="header" class="clearfix shadow">
+    <div id="sitetitle" class="clearfix">
+      <h1><a href="index.html">Lev E. Givon</a></h1>
+    </div>
+
+    {% set nav_bar = [
+    ("index.html", "index", "About Me"),
+    ("research.html", "research", "Research"),
+    ("publications.html", "publications", "Publications"),
+    ("projects.html", "projects", "Projects"),
+    ("art.html", "art", "Art"),
+    ("contact.html", "contact", "Contact")
+    ] -%}    
+    <div id="nav" class="clearfix">
+      <ul>
+	{% for href, id, caption in nav_bar %}
+	  <li><a {% if id == current_page %}class="current"{% endif %}
+	    href="{{ href|e }}">{{ caption|e }}</a></li>
+	{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="slider-wrapper">
+    <div id="slider" class="nivoSlider">
+      <img src="images/slider0.jpg" alt=""
+      title="Center for Engineering and Physical Science Research, Columbia University"/>
+      <img src="images/slider1.jpg" alt=""
+      title="Low Library, Columbia University"/>
+      <img src="images/slider2.jpg" alt=""
+      title="Winter snow in Riverside Park, New York City"/>
+      <img src="images/slider3.jpg" alt=""
+      title="BMT West End Line near 9th Avenue Station, Brooklyn, NY"/>
+      <img src="images/slider4.jpg" alt=""
+      title="Autumn foliage in Riverside Park, New York"/>
+      <img src="images/slider5.jpg" alt=""
+      title="Upper West Side, New York City"/>
+    </div>
+  </div>
+
+  <div id="content" class="clearfix shadow">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <div id="footer" class="shadow">
+    <p>&copy; 2016 <a href="contact.html">Lev E. Givon</a> | 
+      <a href="http://andreasviklund.com/templates/inland/">Template design</a> by 
+      <a href="http://andreasviklund.com/">andreasviklund.com</a> |
+      Maintained with <a href="http://complexity.rtfd.io">Complexity</a></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+</body>
+</html>

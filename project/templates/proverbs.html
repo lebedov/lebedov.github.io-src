@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Art - Proverbs{% endblock %}
+
+{% set current_page = "art" %}
+
+{% block content %}
+    <h2>Proverbs</h2>
+
+    <div id="sidebar" class="left">
+      <hr />
+        Size: 6" x 8"
+      <hr />
+        Completed: 2000
+      <hr />
+
+      <p>
+      A verse from Proverbs, written and colored in ink.
+      </p>
+    </div>
+
+    <div id="main" class="right" align="justify">
+      <div class="inner">
+        <img src="art/proverbs.jpg" height="220" width="426" class="aligncenter photo" alt="Proverbs" />
+      </div>
+    </div>
+    <div class="clear" style="padding-bottom:25px"></div>
+{% endblock %}
