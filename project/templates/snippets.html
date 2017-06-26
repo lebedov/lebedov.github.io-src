@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Lev Givon's Projects{% endblock %}
+
+{% set current_page = "snippets" %}
+
+{% block content %}
+    <h2>Code Snippets</h2>
+
+    <p>These snippets of useful/illustrative code are hosted on my
+    <a href="https://gists.github.com/lebedov">GitHub Gists</a> page. Unless otherwise
+    noted, they may be reused under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD License</a>.</p>
+
+    <div id="gist-list"></div>
+
+    <script>    
+    var GitHub = require('github-api');
+    const gh = new GitHub();
+    const user = gh.getUser('lebedov');
+    // needed because github-api 3.1.0 doesn't contain a function to pull all gists
+    user._requestAllPages(user.__getScopedUrl('gists'), null, function(err, gists) {
+      var out = "";
+      out += "<div id=\"duo1\" align=\"left\"><div class=\"inner\"><ul>\n";
+      for (i=0; i<Math.ceil(gists.length/2); i++) {
+        var desc = gists[i].description;
+        desc = desc.replace(/\.$/, "");
+        out += ("<li>"+desc+" (<a href=\""+gists[i].html_url+"\">code</a>)\n");
+      }
+      out += "</ul></div></div>\n";
+      out += ("<div id=\"duo1\" align=\"left\"><div class=\"inner\"><ul>\n");
+      for (i=Math.ceil(gists.length/2); i<gists.length; i++) {
+        var desc = gists[i].description;
+        desc = desc.replace(/\.$/, "");
+        out += ("<li>"+desc+" (<a href=\""+gists[i].html_url+"\">code</a>)\n");
+      }
+      out += "</ul></div></div>\n";
+      document.getElementById("gist-list").innerHTML = out;
+    });
+    </script>
+    <noscript><p>Snippet list cannot be displayed when JavaScript is disabled.</p></noscript>
+{% endblock %}

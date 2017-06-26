@@ -5,6 +5,7 @@ unexpanded_templates:
   - "art.html"
   - "research.html"
   - "projects.html"
+  - "snippets.html"
   - "publications.html"
   - "contact.html"
   - "received.html"

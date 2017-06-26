@@ -11,6 +11,9 @@
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
     <script type="text/javascript" src="js/nhpup_1.1.js"></script>
+    {% if current_page == "snippets" %}
+    <script type="text/javascript" src="js/github-api.min.js"></script>
+    {% endif %}
     <title>{% block title %}{% endblock %}</title>
     {% if current_page == "contact" %}{% include "base_contact_js.html" %}{% endif %}
 </head>
@@ -44,6 +47,7 @@
     ("research.html", "research", "Research"),
     ("publications.html", "publications", "Publications"),
     ("projects.html", "projects", "Projects"),
+    ("snippets.html", "snippets", "Code Snippets"),
     ("art.html", "art", "Art"),
     ("contact.html", "contact", "Contact")
     ] -%}    
